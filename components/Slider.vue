@@ -14,15 +14,14 @@
                 <!-- Text -->
                 <div class="p-8 pb-2 w-full">
                   <div>
-                    <nuxt-link :to="goto_link" type="button" class="rounded-full px-3 py-2 text-sm font-semibold shadow-sm ring-1 ring-inset ring-white hover:bg-white" :class="'text-['+ slide.text_color +']'">{{goto_title}}</nuxt-link>
+                    <nuxt-link :to="goto_link" type="button" class="rounded-full px-3 py-2 text-sm font-semibold shadow-sm ring-1 ring-inset ring-white hover:bg-white" :style="`color:${slide.text_color}`">{{goto_title}}</nuxt-link>
                     <a :href="slide.link" type="button" class="rounded-full px-3 py-2 text-sm font-semibold shadow-sm float-right sm:hidden" :style="'background:'+ slide.button_color + '; color:' + slide.button_text_color + ';'">{{slide.button_title}}</a>
                   </div>
                   <div class='mt-10'>
-                    <h1 class="slider_title" :class="'text-['+ slide.text_color +']'">{{slide.title}}</h1>
+                    <h1 class="slider_title" :style="`color:${slide.text_color}`">{{slide.title}}</h1>
                     <p v-if="goto_link === '/projects'" class="my-10 text-lg sm:text-2xl">{{slide.short_description}}</p>
                     <a :href="slide.link" type="button" class="rounded-full px-5 py-2 mt-5 text-sm font-semibold hidden sm:inline shadow-sm button-animation-turn-black" :style="'background:'+ slide.button_color + '; color:' + slide.button_text_color + ';'">{{slide.button_title}}</a>
                   </div>
-
                 </div>
               </div>
             </div>
